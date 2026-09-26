@@ -8,7 +8,6 @@
 :root {
     --navy: #0b2d39;
     --teal: #1c6e8c;
-    --blue-fire: #34c6eb;
     --bg:#f3faf9;
     --text: #1f2421;
     --white: #ffffff;
@@ -98,19 +97,13 @@ section {
 /* navbar */
 nav .nav-list {
     display: flex;
-    flex-wrap: wrap;
     gap: 26px;
     list-style: none;
 }
 
 /* id selector */
 #main-nav {
-    flex-basis: 100%;
     margin-top: 10px;
-}
-
-#main-nav .nav-list {
-    justify-content: flex-start;
 }
 
 nav nav-list li{
@@ -131,6 +124,18 @@ nav .nav-list a {
 nav .nav-list a:hover {
     border-bottom-color: var(--teal);
     color: var(--teal);
+}
+
+.nav-toggle {
+    display: none;
+}
+
+.hamburger {
+    display: none;
+    font-size: 1.8rem;
+    color: var(--white);
+    cursor: pointer;
+    user-select: none;
 }
 
 /* hero */
@@ -311,6 +316,8 @@ section p {
     flex-wrap: wrap;
     gap: 28px;
     align-items: flex-start;
+    flex-direction: column;
+    align-items: stretch;
 }
 
 .map-box {
@@ -325,6 +332,10 @@ section p {
     height: 340px;
     border: 0;
     display: block;
+}
+
+.map-box, .location-list {
+    flex: 1 1 auto;
 }
 
 .location-list {
